@@ -1,14 +1,14 @@
-def email_check(sender="university.help@gmail.com"):
+def email_check(sender="university.help@gmail.com", recipient=""):
     if not "@" in sender:
-        return("Не является емейлом")
+        return(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
     elif sender[-3:]==".ru":
-        return("RU")
+        return(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
     elif sender[-4:]==".com":
-        return("EU")
+        return(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
     elif sender[-4:]==".net":
-        return("EU_OLD")
+        return(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
     else:
-        return("Не удалось определить домен")
+        return(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
 
 
 print(email_check())
