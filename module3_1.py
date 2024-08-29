@@ -6,8 +6,7 @@ def count_calls():
 
 def string_info(string="String"):
     count_calls()
-    print(len(string))
-    string_tuple=(len(string), string.lower(), string.upper())
+    string_tuple=(len(string), string.upper(), string.lower())
     return string_tuple
 
 
@@ -25,4 +24,3 @@ print(string_info('Armageddon'))
 print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
 print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
 print(calls)
-
