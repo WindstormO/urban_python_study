@@ -18,14 +18,9 @@ print(string_info())
 
 def is_contains(content="AaA", list_to_search=["AAA"]):
   count_calls()
-  for i in list_to_search:
-      print(list_to_search[i])
-      #if list_to_search[i].upper() == content:
-          #print({EQ})
+  return content in list_to_search
 
-
-
-is_contains()
+print(is_contains())
 
 
 #print(string_info('Capybara'))
