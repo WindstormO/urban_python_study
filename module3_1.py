@@ -11,21 +11,18 @@ def string_info(string="String"):
     return string_tuple
 
 
-
-print(string_info())
-
-
-
-def is_contains(content="AaA", list_to_search=["AAA"]):
+def is_contains(content="", list_to_search=[""]):
+  result = False
   count_calls()
-  return content in list_to_search
+  for item in list_to_search[:]:
+    if item.lower()==content.lower():
+        result = True
+  return result
 
-print(is_contains())
 
-
-#print(string_info('Capybara'))
-#print(string_info('Armageddon'))
-#print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
-#print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
-#print(calls)
+print(string_info('Capybara'))
+print(string_info('Armageddon'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
+print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
+print(calls)
 
