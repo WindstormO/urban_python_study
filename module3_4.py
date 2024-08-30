@@ -1,10 +1,10 @@
 def single_root_words(root_words, *other_words):
-"""Функция, определяющая однокоренные слова"""
+    """Функция, определяющая однокоренные слова"""
     same_words=[]
-    for words in range(other_words):
+    for words in range(len(other_words)):
         if root_words in other_words:
             same_words.append(root_words)
-        elif other_words in root_words:
+        elif other_words[words] in root_words:
             same_words.append(root_words)
     return same_words
 
